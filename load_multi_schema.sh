@@ -1,4 +1,4 @@
-export LD_LIBRARY_PATH=/data/opt/bin/mysql-5.7.11-linux-glibc2.5-x86_64/lib/
+export LD_LIBRARY_PATH=/home/ogh/work/git/mysql-server/build-install/installs/lib
 DBNAME=$1
 WH=$2
 NSCHEMA=$3

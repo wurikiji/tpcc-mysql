@@ -4,13 +4,18 @@
 
 
 
-LIBS=		`mysql_config --libs_r` -lrt
+#LIBS=		`/home/ogh/original/mysql-5.7.15-install/bin/mysql_config --libs_r` -lrt
 
-INC=		-I. `mysql_config --include`
+#INC=		-I. `/home/ogh/original/mysql-5.7.15-install/bin/mysql_config --include` 
 
+LIBS=          $(shell mysql_config --libs_r) -lrt           
+#LIBS=         `/home/ogh/original/mysql-5.7.15-instal
+                                                       
+INC=           -I. $(shell mysql_config --include)           
+#INC=          -I. `/home/ogh/original/mysql-5.7.15-in
 #DEFS=		-DDEBUG
 
-CFLAGS=		-w -O3 -g
+CFLAGS=		-w -O3 -g 
 
 TRANSACTIONS=	neword.o payment.o ordstat.o delivery.o slev.o
 OBJS=		main.o spt_proc.o driver.o support.o sequence.o rthist.o sb_percentile.o $(TRANSACTIONS)

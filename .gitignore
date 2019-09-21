@@ -1,0 +1,6 @@
+*.o
+*.out
+outputs/
+zftl/
+tags
+*.db
